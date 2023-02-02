@@ -8,7 +8,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def main():
     while True:
-        prompt = input("\nType your prompt here: ")
+        prompt = input("\nType your prompt here (Type 'exit' to exit the program): ")
 
         if "exit" in prompt.lower():
             print("Goodbye!")
@@ -22,7 +22,10 @@ def main():
                 tokens = int(number_of_tokens)
 
                 temperature = input(
-                    "\nHow creative do you want the AI to be (0: Low Creativity to 1: High Creativity): "
+                    (
+                        "\nHow creative do you want the AI to be (Default, 0: Low Creativity "
+                        "to 1: High Creativity): "
+                    )
                 )
                 if temperature == "":
                     temperature = 0
