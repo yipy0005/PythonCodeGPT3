@@ -1,0 +1,7 @@
+name: codegpt3
+channels:
+- conda-forge
+dependencies:
+- pip=23.0
+- flake8=6.0.0
+- openai=0.26.4
